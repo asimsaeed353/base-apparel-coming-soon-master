@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  /* Colors */
+  --clr-primary-dRed: hsl(0, 36%, 70%);
+  --clr-primary-sRed: hsl(0, 93%, 68%);
+
+  --clr-neu-dGrayRed: hsl(0, 6%, 24%);
+
+  --grd-one: (135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --grd-two: (135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+  /* Typography */
+  --fs-primary: 0.9375rem;
+
+  --ff-primary: "Josefin Sans", sans-serif;
+
+  --fw-light: 300;
+  --fw-med: 400;
+  --fw-bold: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding-block: 2rem;
+
+  font-family: var(--ff-primary);
+
+  position: relative;
+}
+
+/* Mobile First Workflow */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Hero section containing logo for mobile and hero image for mobile*/
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero__mobile-logo {
+  margin-left: 2rem;
+  width: 110px;
+}
+
+/* Text content and email input */
+.content {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Heading text */
+.content__main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--clr-primary-dRed);
+}
+
+.content__main__heading {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.heading-thin {
+  font-weight: var(--fw-light);
+}
+
+.heading,
+.heading-thin {
+  font-size: 3rem;
+}
+
+.heading {
+  color: var(--clr-neu-dGrayRed);
+  font-weight: var(--fw-bold);
+}
+
+/* Content paragraph */
+.content__main__para {
+  font-size: var(--fs-primary);
+  line-height: 1.35;
+  margin-bottom: 1.5rem;
+}
+
+/* Form section */
+.input {
+  position: relative;
+  width: 95%;
+}
+
+.error-icon {
+  display: none; /* error-icon to be displayed on invalid email submission*/
+  width: 20px;
+
+  position: absolute;
+  right: 45px;
+  top: 12px;
+}
+
+/* Custom error message to be displayer under input section on invalid email submission */
+.error-message {
+  padding: 1.5rem;
+  color: var(--clr-primary-dRed);
+
+  font-size: 0.75rem;
+}
+
+/* Email input field */
+#email {
+  width: 100%;
+  padding: 0.75rem;
+  padding-left: 1.5rem;
+
+  border: 1px solid var(--clr-primary-dRed);
+  border-radius: 5rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Changing default styling */
+input[type="text"]:focus {
+  outline: 1px solid var(--clr-primary-sRed);
+}
+
+input::placeholder {
+  color: var(--clr-primary-dRed);
+}
+
+/* Arro icon for form submission */
+.arrow-icon {
+  cursor: pointer;
+  padding: 10px 23px;
+  border: none;
+  border-radius: 1.25rem;
+
+  position: absolute;
+  top: 1px;
+  right: -20px;
+
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+  box-shadow:  0px 6px 15px var(--clr-primary-dRed);
+}
+
+.arrow-icon:hover{
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)),
+  linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+.attribution {
+  position: absolute;
+  bottom: 0;
+
+  padding-inline: 2rem;
+  margin: 0 auto;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.content__desktop-logo {
+  display: none;
+}
+
+.hero__desktop {
+  display: none;
+}
+
+@media (width > 900px) {
+  body {
+    padding-block: 0;
+  }
+
+  .wrapper {
+    flex-direction: row;
+    align-items: center;
+
+    height: 100vh;
+    padding: 0;
+  }
+
+  .content__desktop-logo {
+    display: block;
+    width: 130px;
+    margin-bottom: 5rem;
+  }
+
+  .content {
+    margin-left: 5rem;
+  }
+
+  .content__main__heading,
+  .content__main__para {
+    text-align: left;
+  }
+
+  .content__main__para {
+    width: 60%;
+  }
+
+  .hero {
+    display: none;
+  }
+
+  .hero__desktop {
+    display: block;
+
+    img {
+      height: 100vh;
+    }
+  }
+
+  form {
+    width: 60%;
+  }
+
+  .attribution {
+    padding-inline: 0;
+    margin: 0 auto;
+
+    left: 40%;
+  }
+}

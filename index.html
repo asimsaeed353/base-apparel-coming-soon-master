@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <!-- Wrapper Container -->
+    <div class="wrapper">
+
+      <!-- Mobile hero section (hidden in desktop) -->
+      <div class="hero">
+        <img
+          class="hero__mobile-logo"
+          src="/images/logo.svg"
+          alt="base apparel logo"
+        />
+        <img
+          class="hero__hero-img-mobile"
+          src="/images/hero-mobile.jpg"
+          alt="model girl"
+        />
+      </div>
+
+      <!-- Content containing heading, paragraph and email input form -->
+      <div class="content">
+        <img src="/images/logo.svg" alt="" class="content__desktop-logo" />
+
+        <div class="content__main">
+          <div class="content__main__heading">
+            <span class="heading-thin">We're</span>
+            <h1 class="heading">Coming</h1>
+            <h1 class="heading">Soon</h1>
+          </div>
+          <p class="content__main__para">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+        </div>
+
+        <!-- Input Email -->
+        <form name="myForm" id="myForm">
+          <div class="input">
+            <div class="input__field">
+              <!-- Error icon to be displayed on invalid email submission -->
+              <img
+                src="/images/icon-error.svg"
+                alt="error icon"
+                class="error-icon"
+              />
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+              />
+              <!-- To Show custom error message on invalid email submission -->
+              <span class="error-message" id="emailError"></span>
+            </div>
+            <!-- Submit button with arrow image -->
+            <input id="submit" type="image" src="/images/icon-arrow.svg" alt="Submit" class="arrow-icon">
+            <!-- <input id="submit" type="submit" src="/images/icon-arrow.svg" alt="submit" class="arrow-icon"> -->
+          </div>
+        </form>
+      </div>
+
+      <!-- Hero image hidden in phone and displayed in desktop -->
+      <div class="hero__desktop">
+        <img
+          src="/images/hero-desktop.jpg"
+          alt="model girl"
+          class="hero__hero-img-desktop"
+        />
+      </div>
+    </div>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">M Asim Saeed</a>.
+      </p>
+    </footer>
+    <!-- script -->
+    <script src="script.js"></script>
+  </body>
+</html>
