@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./project-ss.png.jpg)
+![](./project-ss.png)
 
 ### Links
 
