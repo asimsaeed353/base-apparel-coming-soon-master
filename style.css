@@ -185,6 +185,7 @@ input::placeholder {
 @media (width > 900px) {
   body {
     padding-block: 0;
+    background-image: url('./images/bg-pattern-desktop.svg');
   }
 
   .wrapper {
